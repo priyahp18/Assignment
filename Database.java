@@ -9,8 +9,9 @@ public class Database {
 
 	public static void main(String[] args) {
 		// URL
-		String URL = "jdbc:mysql://localhost/Testdata";
-		
+		String URL = "jdbc:mysql://localhost:3306/Testdata";
+		//load and register the driver
+		Class.forName("com.mysql.jdbc.driver");
 		try (Connection connection = DriverManager.getConnection(URL)) {
             // Execute SQL query
          Statement statement = connection.createStatement();
